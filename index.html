@@ -1,130 +1,301 @@
-<!DOCTYPE html>
+.about-text p{<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EX Digital | Digital Marketing Agency</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX Digital | Digital Marketing Agency</title>
+    <!-- FontAwesome Icons for WhatsApp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
-}
+        body {
+            background: #f5f7fb;
+            color: #222;
+            padding-top: 70px; /* fixed nav ke niche space ke liye */
+        }
 
-body{
-background:#f5f7fb;
-color:#222;
-}
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+            z-index: 99999; /* menu ko sabse upar rakhne ke liye */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
 
-nav{
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 9999;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 10%;
-background: #0f172a;
-color: white;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
 
-}
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
 
-.logo{
-color:#fff;
-font-size:28px;
-font-weight:bold;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
 
-nav ul{
-display:flex;
-list-style:none;
-gap:25px;
-}
+        nav ul li a:hover {
+            color: #ff6b35; /* Orange hover effect */
+        }
 
-nav ul li a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
+        header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
 
-header{
-padding:150px 20px 100px;
-background:linear-gradient(135deg,#2563eb,#1e3a8a);
-text-align:center;
-color:white;
-}
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
 
-header h1{
-font-size:55px;
-margin-bottom:15px;
-}
+        header p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
 
-header p{
-font-size:24px;
-margin-bottom:35px;
-}
+        .btn {
+            background: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+        }
 
-.btn{
-display:inline-block;
-background:#ff6b00;
-padding:16px 40px;
-color:white;
-text-decoration:none;
-font-size:18px;
-font-weight:bold;
-border-radius:8px;
-}
+        .btn:hover {
+            background: #e55a2b;
+            transform: scale(1.05);
+        }
 
-section{
-padding:70px 8%;
-}
+        #services {
+            padding: 80px 10%;
+            text-align: center;
+        }
 
-h2{
-text-align:center;
-font-size:40px;
-margin-bottom:40px;
-}
+        #services h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
 
-.card{
-background:#fff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,.08);
-text-align:center;
-}
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
 
-.card h3{
-margin-bottom:15px;
-}
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
+        .card h3 {
+            margin-bottom: 15px;
+            color: #0f172a;
+        }
 
-.about img{
-width:100%;
-border-radius:12px;
-}
+        .card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
 
-.about-text h3{
-font-size:30px;
-margin-bottom:15px;
-}
-.about-text p{
+        .about {
+            padding: 80px 10%;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #444;
+        }
+
+        .contact {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        footer {
+            background: #020617;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,.3);
+            z-index: 999999;
+        }
+
+        @media(max-width:768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            body {
+                padding-top: 110px; /* Mobile me menu bada ho jata h isliye zyada space */
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">EX Digital</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>EX Digital</h1>
+        <p>Grow Faster. Market Smarter.</p>
+        <a class="btn" href="https://wa.me/918949530220">Book Free Consultation</a>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>SEO</h3>
+                <p>Rank higher on Google and get more organic traffic.</p>
+            </div>
+            <div class="card">
+                <h3>Website Design</h3>
+                <p>Modern responsive websites for every business.</p>
+            </div>
+            <div class="card">
+                <h3>Social Media Marketing</h3>
+                <p>Instagram & Facebook growth strategies.</p>
+            </div>
+            <div class="card">
+                <h3>Google Ads</h3>
+                <p>Generate quality leads with paid advertising.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-text">
+            <h2>About EX Digital</h2>
+            <p>We are a results-driven digital marketing agency dedicated to helping businesses grow their online presence, attract quality leads, and scale smarter. With expert strategies in SEO, web design, and paid ads, we turn your clicks into customers.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p>Have a project in mind? Let's discuss how we can grow your business.</p>
+        <p>Email: info@exdigital.com</p>
+        <p>Phone: +91 8949530220</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 EX Digital. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918949530220" class="whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
+
 line-height:1.8;
 font-size:18px;
 }
@@ -242,27 +413,4 @@ Book Free Consultation
 <section id="about" class="about">
     <div class="about-text">
         <h2>About EX Digital</h2>
-        <p>We are a results-driven digital marketing agency dedicated to helping businesses grow their online presence, attract quality leads, and scale smarter. With expert strategies in SEO, web design, and paid ads, we turn your clicks into customers.</p>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>Get In Touch</h2>
-    <p>Have a project in mind? Let's discuss how we can grow your business.</p>
-    <p>Email: info@exdigital.com</p>
-    <p>Phone: +91 8949530220</p>
-</section>
-
-<footer>
-    <p>&copy; 2026 EX Digital. All Rights Reserved.</p>
-</footer>
-
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/918949530220" class="whatsapp" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-</body>
-</html>
-
-</section>
+        <p>We are a results-driven digital marketing agency dedicated to helping businesses grow their online presence, 
